@@ -1,0 +1,10 @@
+{
+  "diffuse_shortcut_test_accuracy": 0.9483333230018616,
+  "diffuse_shortcut_probe_reliance": {
+    "circle_no_shift": 0.0,
+    "circle_brightness_shift": 1.0,
+    "square_no_shift": 0.0,
+    "square_brightness_shift": 1.0
+  },
+  "brightness_shift": 18.0
+}

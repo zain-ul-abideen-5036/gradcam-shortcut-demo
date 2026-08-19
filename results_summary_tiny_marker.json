@@ -1,0 +1,15 @@
+{
+  "tiny_marker_test_accuracy": 0.9916666746139526,
+  "tiny_marker_probe_reliance": {
+    "circle_no_marker": 0.0,
+    "circle_marker": 1.0,
+    "square_no_marker": 0.0,
+    "square_marker": 1.0
+  },
+  "tiny_marker_box": [
+    2,
+    2,
+    4,
+    4
+  ]
+}
