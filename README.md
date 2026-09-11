@@ -163,6 +163,6 @@ This repository is part of a broader, ongoing body of public research work: repr
 
 <br/>
 
-*If this repository helped you catch a false 98%, a star is the best kind of feedback.*
+*If this repository helped you catch a heatmap you were about to trust too much, a star is the best kind of feedback.*
 
 </div>
