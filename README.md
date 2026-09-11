@@ -118,6 +118,8 @@ Released under the [MIT License](LICENSE). Use the code freely. If you reference
 
 ---
 
+<div align="center">
+
 ## About the Author
 
 <img src="https://img.shields.io/badge/Applied_ML-Computer_Vision-1a1a2e?style=flat-square" />
@@ -126,13 +128,23 @@ Released under the [MIT License](LICENSE). Use the code freely. If you reference
 
 ### Zain Ul Abideen
 
-I work at the intersection of applied machine learning and computer vision, mostly living in the space between a model that runs and a model that can be trusted. That usually means chasing down the quiet failure modes that a headline metric, or a convincing picture, hides: data leakage, mismatched validation splits, and, as this repository shows, an interpretability heatmap that looks correct and isn't.
+</div>
+
+I work at the intersection of applied machine learning and computer vision, mostly living in the space between a model that runs and a model that can be trusted. That usually means chasing down the quiet failure modes that a headline metric hides: data leakage, mismatched validation splits, and, as this repository shows, accuracy scores that look great and mean nothing.
 
 I graduated in Computer Science from the University of Central Punjab, Lahore, with a minor in AI, ML, and Deep Learning, and I currently work as a Lead AI/ML Instructor while holding a Senior Microsoft Learn Student Ambassador (Gold) role. Alongside that, I take on applied ML engineering work for external clients and collaborate on graduate-level research, most recently redesigning the validation methodology and statistical testing for an MSc dissertation on deep transfer learning.
 
-This repository is part of a broader, ongoing body of public research work: reproducible case studies, each one built to be run, questioned, and verified rather than taken on faith. Every piece follows the same rule this one does: if the honest result is a method that fails in a specific, checkable way, that stays in, because that's usually the more useful finding.
+This repository is part of a broader, ongoing body of public research work: reproducible case studies, each one built to be run, questioned, and verified rather than taken on faith. Every piece follows the same rule this one does: if the honest result is a fix that underperforms or a number that doesn't move the way it's supposed to, that stays in, because that's usually the more useful finding.
+
+<br/>
+
+<div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-zain--ul--abideen--5036-181717?style=for-the-badge&logo=github)](https://github.com/zain-ul-abideen-5036)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-zain--ul--abideen3-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/zain-ul-abideen3)
 
-*If this repository helped you catch a heatmap you were about to trust too much, a star is the best kind of feedback.*
+<br/>
+
+*If this repository helped you catch a false 98%, a star is the best kind of feedback.*
+
+</div>
