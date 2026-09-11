@@ -14,11 +14,15 @@
 
 <img src="figures/readme_banner.png" alt="Grad-CAM Told Me My Model Was Looking at the Right Thing" width="100%"/>
 
+---
+
 ## Why this exists
 
 Grad-CAM is probably the most widely used interpretability tool for CNNs, and it shows up constantly as the thing a paper or a model card points to and says "see, the model is looking at the right region." That claim is only sometimes true, and the method gives no visible warning when it isn't.
 
 This repository is the full, reproducible proof of both halves of that claim. A clean model, a model trained with a shortcut small enough to seem safe, a model with that same shortcut shrunk further, and a model whose shortcut has no location at all, tested honestly enough that the method's real blind spot shows up in the results rather than being explained away. Every number in the article traces back to the notebook in this repo. Nothing here is illustrative or hand-picked.
+
+---
 
 ## The finding, in one table
 
@@ -30,6 +34,8 @@ This repository is the full, reproducible proof of both halves of that claim. A 
 | Diffuse shortcut, global brightness | 0.9483 | Brightness only | Misleadingly highlights shape |
 
 *Every model scores between 94.8% and 99.5% accuracy. Grad-CAM correctly flags the shortcut in three of the four models, including one hidden in 2x2 pixels, and produces a misleading, clean-looking heatmap on the fourth. That gap is the entire point of this project.*
+
+---
 
 ## Repository structure
 
@@ -60,6 +66,8 @@ gradcam-shortcut-demo/
         └── eq_gradcam_map.png
 ```
 
+---
+
 ## What's inside the dataset
 
 A fully synthetic, procedurally generated stand-in for a real image classification problem, built so the ground truth discriminative signal is always known exactly:
@@ -73,6 +81,8 @@ A fully synthetic, procedurally generated stand-in for a real image classificati
 | Diffuse shortcut | A global background brightness shift, correlated with the label at 95% |
 | Seeds | Fixed per model (1 through 4), for exact reproducibility |
 
+---
+
 ## The four models, tested honestly
 
 | Model | What it tests | What actually happened |
@@ -83,6 +93,8 @@ A fully synthetic, procedurally generated stand-in for a real image classificati
 | **Diffuse shortcut (brightness)** | A shortcut with no single region to point to | Grad-CAM produces a clean heatmap on the shape, and is completely wrong |
 
 No result here is presented as a universal property of Grad-CAM. The point of showing all four, with the full Grad-CAM overlays and probe-set results behind them, is that a clean-looking heatmap is not proof of correct reasoning. It has to be checked against a shortcut hypothesis that includes diffuse, non-spatial failure modes, not assumed safe because the picture looks reasonable.
+
+---
 
 ## Reproduce it
 
@@ -102,15 +114,21 @@ Run the notebook top to bottom. Every figure in `figures/` regenerates from scra
 
 Want to test this on a different shortcut instead of a brightness shift? Replace the `make_diffuse_dataset(...)` cell with your own transformation. Everything downstream, training, the probe set, every figure, adapts automatically.
 
+---
+
 ## Read the full write-up
 
 The complete article, including the math behind Grad-CAM, the full walkthrough of all four models, and the checklist for auditing any heatmap you're handed, lives in [`article.md`](article.md) in this repo, and is also published on Medium.
 
 **[Read "Grad-CAM Told Me My Model Was Looking at the Right Thing" on Medium →](#)**
 
+---
+
 ## Why this matters beyond this one dataset
 
 This case study is a direct extension of interpretability questions that show up constantly in real diagnostic imaging work: Grad-CAM (or a similar class activation method) used as the sanity check on whether a CT or MRI classifier is actually looking at the relevant anatomy, when the real confound (a scanner-specific artifact, an exposure difference between sites, a compression signature) is exactly the kind of diffuse, non-localized shortcut this repository shows the method cannot see. The habit this repo argues for, a decoupled probe set before a trusted heatmap, is the same discipline behind catching subject-level data leakage and validation-pipeline leaks before they inflate a reported result anywhere else.
+
+---
 
 ## License
 
