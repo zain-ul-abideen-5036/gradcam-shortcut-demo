@@ -120,7 +120,11 @@ Want to test this on a different shortcut instead of a brightness shift? Replace
 
 The complete article, including the math behind Grad-CAM, the full walkthrough of all four models, and the checklist for auditing any heatmap you're handed, lives in [`article.md`](article.md) in this repo, and is also published on Medium.
 
+<div align="center">
+    
 **[Read "Grad-CAM Told Me My Model Was Looking at the Right Thing" on Medium →](#)**
+
+</div>
 
 ---
 
