@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="figures/readme_banner.png" alt="Grad-CAM Told Me My Model Was Looking at the Right Thing" width="100%"/>
-
 [![Read on Medium](https://img.shields.io/badge/Read_the_article-Medium-black?style=for-the-badge&logo=medium)](#)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](#)
@@ -13,6 +11,8 @@
 </div>
 
 > A heatmap that lands on a plausible-looking region feels like evidence, even when it isn't. Four trained models later, one of them is confidently wrong in a way Grad-CAM cannot see, and the picture it draws looks identical to the model that got it right.
+
+<img src="figures/readme_banner.png" alt="Grad-CAM Told Me My Model Was Looking at the Right Thing" width="100%"/>
 
 ## Why this exists
 
