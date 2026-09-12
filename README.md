@@ -1,6 +1,6 @@
 <div align="center">
 
-# Grad-CAM Told Me My Model Was Looking at the Right Thing
+# Grad-CAM Told Me My Model Was Looking at the Right Thing. It Was Lying.
 **A reproducible case study in when Grad-CAM catches a model cheating, and when it produces a heatmap that looks exactly like success.**
 
 [![Read on Medium](https://img.shields.io/badge/Read_the_article-Medium-black?style=for-the-badge&logo=medium)](#)
