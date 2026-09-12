@@ -59,7 +59,13 @@ Because I am generating the data myself, I know exactly what a model should be l
 
 First, a model with nothing to cheat with. Circles and squares, randomized position, size, and rotation, on a noisy background, so the model has to actually learn shape.
 
-![Dataset samples, shortcut variant](figures/fig1_dataset_samples.png)
+<p align="center">
+  <img src="figures/fig1_dataset_samples.png" alt="Dataset samples from the shortcut variant" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 1.</strong> Six samples from the shortcut variant of the dataset. Two square samples contain an injected marker in the top-left corner, while every circle and unmarked square remains otherwise identical in style and noise level. This controlled setup allows the experiment to test whether the model learns the actual shape or relies on the artificial shortcut.
+</p>
 
 This model reached 99.5% test accuracy, and Grad-CAM at the final conv layer shows exactly what you would hope.
 
