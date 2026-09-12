@@ -1,10 +1,10 @@
-![Grad-CAM Told Me My Model Was Looking at the Right Thing](figures/banner.png)
-
-# Grad-CAM Told Me My Model Was Looking at the Right Thing
+# Grad-CAM Told Me My Model Was Looking at the Right Thing. It Was Lying.
 
 ### It was lying, but only about one specific kind of shortcut. This is a full, reproducible teardown of when Grad-CAM catches a model cheating and when it produces a heatmap indistinguishable from a model reasoning correctly, using four trained models and the code behind every one of them.
 
-*Originally published on [Medium](#). This version is the full technical companion, with every figure and result reproducible from the notebook in this repository.*
+![Grad-CAM Told Me My Model Was Looking at the Right Thing](figures/banner.png)
+
+*Originally published on [Medium](https://medium.com/@zainulabideen5/grad-cam-told-me-my-model-was-looking-at-the-right-thing-it-was-lying-adea677fb59c). This version is the full technical companion, with every figure and result reproducible from the notebook in this repository.*
 
 ---
 
