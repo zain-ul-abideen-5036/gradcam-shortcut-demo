@@ -3,7 +3,7 @@
 # Grad-CAM Told Me My Model Was Looking at the Right Thing. It Was Lying.
 **A reproducible case study in when Grad-CAM catches a model cheating, and when it produces a heatmap that looks exactly like success.**
 
-[![Read on Medium](https://img.shields.io/badge/Read_the_article-Medium-black?style=for-the-badge&logo=medium)](#)
+[![Read on Medium](https://img.shields.io/badge/Read_the_article-Medium-black?style=for-the-badge&logo=medium)](https://medium.com/@zainulabideen5/grad-cam-told-me-my-model-was-looking-at-the-right-thing-it-was-lying-adea677fb59c?sharedUserId=zainulabideen5)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
