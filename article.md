@@ -69,7 +69,13 @@ First, a model with nothing to cheat with. Circles and squares, randomized posit
 
 This model reached 99.5% test accuracy, and Grad-CAM at the final conv layer shows exactly what you would hope.
 
-![Grad-CAM, clean model](figures/fig2_gradcam_clean.png)
+<p align="center">
+  <img src="figures/fig2_gradcam_clean.png" alt="Grad-CAM overlays for the clean model" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 2.</strong> Grad-CAM overlays for the clean model, computed at the final convolutional layer. The heatmaps consistently focus on the shape itself across all four examples, indicating that the model's predictions are based on the relevant visual structure rather than an artificial shortcut.
+</p>
 
 Next, I injected a spurious feature into a second model: a small bright marker in the top-left corner, present on 99.5% of squares and essentially never on circles during training.
 
@@ -81,11 +87,23 @@ if has_marker:
 
 To make this a fair fight rather than a foregone conclusion, I also made the shape signal itself noisier and lower contrast than in the clean run: smaller shapes, heavier background noise, mild blur. The shortcut model reached 99.2% test accuracy, statistically indistinguishable from the clean model.
 
-![Test accuracy, four models compared](figures/fig4_accuracy_comparison.png)
+<p align="center">
+  <img src="figures/fig4_accuracy_comparison.png" alt="Test accuracy comparison across four models" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 3.</strong> Test accuracy comparison across all four models. Although the models achieve high accuracy between 94.8% and 99.5%, the narrow performance range makes accuracy alone insufficient for determining whether the models have learned the correct underlying visual relationship.
+</p>
 
 By accuracy alone, these look like similarly capable classifiers. To find out what the shortcut model was actually using, I built a probe set that decouples shape from marker completely: circles with and without the marker, squares with and without the marker, in equal numbers, combinations the model never saw during training in that proportion.
 
-![Probe set reliance, shortcut model](figures/fig5_probe_reliance.png)
+<p align="center">
+  <img src="figures/fig5_probe_reliance.png" alt="Shortcut model reliance on marker versus shape" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 4.</strong> Predictions from the shortcut model on a decoupled probe set in which marker presence and actual shape are varied independently. The model's predictions follow the injected marker in 100% of cases and the actual shape in 0%, providing direct evidence that the model has learned the shortcut rather than the intended classification signal.
+</p>
 
 Prediction is 100% determined by marker presence and 0% by actual shape. Accuracy on the original test set never caught this, because in the training distribution, shape and marker agreed almost all of the time. Grad-CAM, however, does catch it.
 
