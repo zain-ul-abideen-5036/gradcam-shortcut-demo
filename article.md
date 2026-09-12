@@ -173,12 +173,18 @@ My best read on why: the shape region is simply where the network's activations 
 
 ## Results across all four models
 
+<p align="center"><strong>Table 1.</strong>Test accuracy, actual signal used, and Grad-CAM’s verdict for all four models. Grad-CAM correctly flags the shortcut in three of four cases, including one hidden in 2x2 pixels, and is misled only by the shortcut with no spatial location.</p>
+
+<div align="center">
+    
 | Model | Test Accuracy | Actual Signal Used | Grad-CAM Verdict |
 |:--|:--:|:--|:--|
 | Clean | 0.9950 | Shape | Correctly localizes shape |
 | Localized shortcut, 6x6px marker | 0.9917 | Marker only | Correctly localizes marker |
 | **Localized shortcut, 2x2px marker** | 0.9917 | Marker only | **Still catches it** |
 | Diffuse shortcut, global brightness | 0.9483 | Brightness only | Misleadingly highlights shape |
+
+</div>
 
 Notice the accuracy column: every model scores between 94.8% and 99.5%. **Accuracy tells you nothing about which of these models you can trust**, and neither, it turns out, does a clean-looking Grad-CAM heatmap on its own, unless you already know the shortcut you are worried about happens to live in a region.
 
