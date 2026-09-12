@@ -130,7 +130,14 @@ TINY_MARKER_BOX = (2, 2, 4, 4)  # 2x2 px, vs. the original 6x6 px
 
 The model's reliance was identical: 100% marker, 0% shape. Test accuracy also barely moved, 99.2%, same as the 6x6 pixel version. But Grad-CAM still found it.
 
-![Grad-CAM, tiny 2x2 pixel marker](figures/fig6_gradcam_tiny_marker.png)
+<p align="center">
+  <img src="figures/fig6_gradcam_tiny_marker.png" alt="Grad-CAM overlays for the tiny 2x2 pixel marker" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 6.</strong> Grad-CAM overlays after shrinking the injected marker to 2×2 pixels. Reliance on the marker remains at 100%, and Grad-CAM continues to isolate the tiny marker, showing that the shortcut remains detectable even at this extremely small scale.
+</p>
+
 
 Even at this size the marker is stark white against a noisy dark background, a large, unambiguous local gradient, and that is enough for Grad-CAM to isolate it regardless of how few pixels it physically occupies. My resolution hypothesis did not hold up in this setting. I would rather report that than quietly drop it.
 
