@@ -107,7 +107,14 @@ By accuracy alone, these look like similarly capable classifiers. To find out wh
 
 Prediction is 100% determined by marker presence and 0% by actual shape. Accuracy on the original test set never caught this, because in the training distribution, shape and marker agreed almost all of the time. Grad-CAM, however, does catch it.
 
-![Grad-CAM, shortcut model](figures/fig3_gradcam_shortcut.png)
+<p align="center">
+  <img src="figures/fig3_gradcam_shortcut.png" alt="Grad-CAM overlays for the shortcut model" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 5.</strong> Grad-CAM overlays for the localized shortcut model. On every marked square, the heatmap ignores the shape and isolates the corner marker instead, clearly revealing that the model relies on the injected shortcut rather than the intended visual feature.
+</p>
+
 
 For every square with a marker, the heatmap ignores the shape entirely and lights up the corner. This is Grad-CAM working exactly as intended, correctly implicating the shortcut. I want to be upfront about that, because it complicates the tidier version of this story I expected going in.
 
