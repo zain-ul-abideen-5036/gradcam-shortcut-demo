@@ -122,7 +122,7 @@ The complete article, including the math behind Grad-CAM, the full walkthrough o
 
 <div align="center">
     
-**[Read "Grad-CAM Told Me My Model Was Looking at the Right Thing" on Medium →](#)**
+**[Read "Grad-CAM Told Me My Model Was Looking at the Right Thing" on Medium →](https://medium.com/@zainulabideen5/grad-cam-told-me-my-model-was-looking-at-the-right-thing-it-was-lying-adea677fb59c?sharedUserId=zainulabideen5)**
 
 </div>
 
