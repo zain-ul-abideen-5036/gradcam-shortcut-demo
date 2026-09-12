@@ -157,7 +157,13 @@ if has_shift:
 
 This model reached 94.8% test accuracy, and the probe test showed the same story as before: 100% reliance on the brightness shift, 0% on actual shape.
 
-![Grad-CAM, diffuse shortcut model](figures/fig7_gradcam_diffuse.png)
+<p align="center">
+  <img src="figures/fig7_gradcam_diffuse.png" alt="Grad-CAM overlays for the diffuse shortcut model" width="500">
+</p>
+
+<p align="center">
+  <strong>Figure 7.</strong> Grad-CAM overlays for the diffuse shortcut model, which relies entirely on global background brightness. The heatmap still lands cleanly on the shape, appearing visually similar to the clean model's localization in Figure 2, despite the model not using the shape for its prediction.
+</p>
 
 This is the result that opened this article. The heatmap is tight, confident, and sitting right on the shape, visually almost identical to the clean model's correct localization. There is nothing in this picture that would tell you the model is actually reading a global brightness statistic smeared across the entire image. It is clean, and it is wrong.
 
